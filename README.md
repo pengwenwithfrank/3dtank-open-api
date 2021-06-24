@@ -5,6 +5,7 @@
 >    - 请求类型 ContentType=application/x-www-form-urlencoded
 >    - 方法签名MD5 (详情见第6条)
 >    - 除创建token以外的其他请求不可以重复使用，ts和sign必须重新生成
+>    - [示例代码] https://github.com/pengwenwithfrank/3dtank-open-api/blob/master/src/test/java/com/example/demo/DemoApplicationTests.java
    
 ## 2. 创建token (POST)
 >   - http://localhost:8000/oauth/token
