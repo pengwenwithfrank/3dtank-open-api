@@ -20,7 +20,7 @@
 
   |  参数   | 类型  |   描述 |
   |  ----  | ----  |  ---- |
-  | access_token  | string  | jwt token |
+  | access_token  | string  | 授权token |
   | token_type  | string |  token 类型 |
   | expires_in  | int | token的有效期 |
   | scope  | string |  授权范围 |
