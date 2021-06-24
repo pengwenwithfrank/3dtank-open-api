@@ -28,7 +28,7 @@ class DemoApplicationTests {
     /**
      * 密钥 游戏方提供创建
      */
-    private static final String CLIENT_SECRET = "dItpXVRV!dSaxCE^1EhCKP@8^#swK4iY";
+    private static final String CLIENT_SECRET = "";
     /**
      * 授权类型，固定值
      */
@@ -44,7 +44,7 @@ class DemoApplicationTests {
     /**
      * 请求签名密钥，游戏方提供创建
      */
-    private static final String SIGN_KEY="HSnbLl6RWM^W&fA*30HJ0lbBmvK9wW#p";
+    private static final String SIGN_KEY="";
 
     private static RestTemplate restTemplate = new RestTemplate();
 
