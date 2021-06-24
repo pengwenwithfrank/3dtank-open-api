@@ -8,7 +8,7 @@
 >    - [示例代码] https://github.com/pengwenwithfrank/3dtank-open-api/blob/master/src/test/java/com/example/demo/DemoApplicationTests.java
    
 ## 2. 创建token (POST)
->   - http://localhost:8000/oauth/token
+>   - https://open-api.3dtank.com/oauth/token
 >   
   |  参数   | 类型  |   是否必填 | 描述 |
   |  ----  | ----  | ---- | ---- |
@@ -28,7 +28,7 @@
     
 
 ## 3. 登录
->   - http://localhost:8000/tank-ymxk-web/api/login
+>   - https://open-api.3dtank.com/tank-ymxk-web/api/login
 >   
 >
    |  header   | 类型  |   是否必填 | 描述 |
@@ -55,7 +55,7 @@
  
 
 ## 4. 获取用户信息
->   - http://localhost:8000/tank-ymxk-web/api/get-user-info
+>   - https://open-api.3dtank.com/tank-ymxk-web/api/get-user-info
 >   
 >
    |  header   | 类型  |   是否必填 | 描述 |
@@ -81,7 +81,7 @@
 
 
 ## 5. 充值
->   - http://localhost:8000/tank-ymxk-web/api/notification-of-top-up
+>   - https://open-api.3dtank.com/tank-ymxk-web/api/notification-of-top-up
 >   
 >
    |  header   | 类型  |   是否必填 | 描述 |
