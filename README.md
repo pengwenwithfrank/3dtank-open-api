@@ -109,6 +109,11 @@
 
 
 
+## 6. 签名
+>   - key=value&key=value+SIGN_KEY,key首字母按照ASCII编码排序升序，SIGN_KEY请联系游戏方
+>   - fcm=0&server_id=1&ts=1624524753990&user_id=123+SIGN_KEY ,"+"号为字符串连接符，各语言不一样，请注意！
+
+
 
 
 
