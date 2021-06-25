@@ -24,7 +24,7 @@ class DemoApplicationTests {
     /**
      * 客户端id
      */
-    private static final String CLIENT_ID ="ymxk";
+    private static final String CLIENT_ID ="";
     /**
      * 密钥 游戏方提供创建
      */
@@ -40,11 +40,11 @@ class DemoApplicationTests {
     /**
      * 授权地址
      */
-    private static final String AUTH_URL ="http://localhost:8000/oauth/token";
+    private static final String AUTH_URL ="https://open-api.3dtank.com/oauth/token";
     /**
      * 请求签名密钥，游戏方提供创建
      */
-    private static final String SIGN_KEY="";
+    private static final String SIGN_KEY="HSnbLl6RWM^W&fA*30HJ0lbBmvK9wW#p";
 
     private static RestTemplate restTemplate = new RestTemplate();
 
@@ -66,17 +66,17 @@ class DemoApplicationTests {
         map.add("user_id", 123);
         map.add("server_id",1);
         map.add("ts",ts);
-        map.add("fcm",0);
+        map.add("fcm",1);
 
         Map signMap =new HashMap();
         signMap.put("user_id",123);
         signMap.put("server_id",1);
         signMap.put("ts",ts);
-        signMap.put("fcm",0);
+        signMap.put("fcm",1);
         map.add("sign",createSign(signMap));
 
         HttpEntity entity = new HttpEntity(map,headers);
-        ResponseEntity<Map> exchange = restTemplate.exchange("http://localhost:8000/tank-ymxk-web/api/login", HttpMethod.POST, entity, Map.class);
+        ResponseEntity<Map> exchange = restTemplate.exchange("https://open-api.3dtank.com/tank-ymxk-web/api/login", HttpMethod.POST, entity, Map.class);
         System.out.println(exchange.getBody());
         /**
          * 返回值：
@@ -110,7 +110,7 @@ class DemoApplicationTests {
         map.add("sign",createSign(signMap));
 
         HttpEntity entity = new HttpEntity(map,headers);
-        ResponseEntity<Map> exchange = restTemplate.exchange("http://localhost:8000/tank-ymxk-web/api/get-user-info", HttpMethod.POST, entity, Map.class);
+        ResponseEntity<Map> exchange = restTemplate.exchange("https://open-api.3dtank.com/tank-ymxk-web/api/get-user-info", HttpMethod.POST, entity, Map.class);
         System.out.println(exchange.getBody());
     }
 
@@ -141,7 +141,7 @@ class DemoApplicationTests {
         map.add("sign",createSign(signMap));
 
         HttpEntity entity = new HttpEntity(map,headers);
-        ResponseEntity<Map> exchange = restTemplate.exchange("http://localhost:8000/tank-ymxk-web/api/notification-of-top-up", HttpMethod.POST, entity, Map.class);
+        ResponseEntity<Map> exchange = restTemplate.exchange("https://open-api.3dtank.com/tank-ymxk-web/api/notification-of-top-up", HttpMethod.POST, entity, Map.class);
         System.out.println(exchange.getBody());
     }
 
