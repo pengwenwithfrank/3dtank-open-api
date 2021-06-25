@@ -38,13 +38,21 @@ class DemoApplicationTests {
      */
     private static final String SCOPE ="ALL";
     /**
-     * 授权地址
+     * 1.域名地址
+     * 2.授权url
+     * 3.登录
+     * 4.获取用户信息
+     * 5.支付充值
      */
-    private static final String AUTH_URL ="https://open-api.3dtank.com/oauth/token";
+    private static final String DOMAIN ="https://open-api.3dtank.com";
+    private static final String AUTH_URL =DOMAIN+"/oauth/token";
+    private static final String LOGIN_URL=DOMAIN+"/tank-ymxk-web/api/login";
+    private static final String GET_USER_INFO_URL=DOMAIN+"/tank-ymxk-web/api/get-user-info";
+    private static final String TOP_UP_URL=DOMAIN+"/tank-ymxk-web/api/notification-of-top-up";
     /**
      * 请求签名密钥，游戏方提供创建
      */
-    private static final String SIGN_KEY="HSnbLl6RWM^W&fA*30HJ0lbBmvK9wW#p";
+    private static final String SIGN_KEY="";
 
     private static RestTemplate restTemplate = new RestTemplate();
 
@@ -76,7 +84,7 @@ class DemoApplicationTests {
         map.add("sign",createSign(signMap));
 
         HttpEntity entity = new HttpEntity(map,headers);
-        ResponseEntity<Map> exchange = restTemplate.exchange("https://open-api.3dtank.com/tank-ymxk-web/api/login", HttpMethod.POST, entity, Map.class);
+        ResponseEntity<Map> exchange = restTemplate.exchange(LOGIN_URL, HttpMethod.POST, entity, Map.class);
         System.out.println(exchange.getBody());
         /**
          * 返回值：
@@ -110,7 +118,7 @@ class DemoApplicationTests {
         map.add("sign",createSign(signMap));
 
         HttpEntity entity = new HttpEntity(map,headers);
-        ResponseEntity<Map> exchange = restTemplate.exchange("https://open-api.3dtank.com/tank-ymxk-web/api/get-user-info", HttpMethod.POST, entity, Map.class);
+        ResponseEntity<Map> exchange = restTemplate.exchange(GET_USER_INFO_URL, HttpMethod.POST, entity, Map.class);
         System.out.println(exchange.getBody());
     }
 
@@ -141,7 +149,7 @@ class DemoApplicationTests {
         map.add("sign",createSign(signMap));
 
         HttpEntity entity = new HttpEntity(map,headers);
-        ResponseEntity<Map> exchange = restTemplate.exchange("https://open-api.3dtank.com/tank-ymxk-web/api/notification-of-top-up", HttpMethod.POST, entity, Map.class);
+        ResponseEntity<Map> exchange = restTemplate.exchange(TOP_UP_URL, HttpMethod.POST, entity, Map.class);
         System.out.println(exchange.getBody());
     }
 
