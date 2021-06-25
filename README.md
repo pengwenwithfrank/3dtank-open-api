@@ -1,8 +1,8 @@
 # Tank Open Api
 
 ##  1. 接入说明
->    - 基于 [OAuth2]: https://oauth.net/2 标准授权安全访问
 >    - 请求类型 ContentType=application/x-www-form-urlencoded
+>    - 返回 json类型
 >    - 方法签名MD5 (详情见第6条)
 >    - 除创建token以外的其他请求不可以重复使用，ts和sign必须重新生成
 >    - [示例代码] https://github.com/pengwenwithfrank/3dtank-open-api/blob/master/src/test/java/com/example/demo/DemoApplicationTests.java
